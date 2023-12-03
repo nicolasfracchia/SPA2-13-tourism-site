@@ -20,6 +20,10 @@ export class getDataService {
     return this.cities;
   }
 
+  getAllCitiesName(): string[]{
+    return this.cities.map(city => city.name);
+  }
+
   getWeatherInfo(city_name: string): iWeather | undefined {
     return this.weather.find((i) => i.city_name === city_name);
   }

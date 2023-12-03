@@ -83,3 +83,4 @@ I'm removing the "Weather" option from the menu since it's related to a city and
     - ReactiveFormsModule
     - FormBuilder
 4. Created submit function.
+5. Created the service to get only the cities name, imported into tech-ideas.component.ts and implemented on the form drop-down.

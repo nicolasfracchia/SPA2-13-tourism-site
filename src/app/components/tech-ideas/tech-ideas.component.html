@@ -14,7 +14,8 @@
     <div class="input-container">
         <label>City:</label>
         <select formControlName="city">
-            <option>--- SELECT CITY ---</option>
+            <option value="0" selected>--- SELECT CITY ---</option>
+            <option *ngFor="let city of cities">{{ city }}</option>
         </select>
     </div>
     <div class="input-container">

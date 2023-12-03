@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { getDataService } from '../../services/getdata.service';
 
 @Component({
   selector: 'app-tech-ideas',
@@ -11,8 +12,10 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
 })
 export class TechIdeasComponent {
   techIdeasForm!: FormGroup;
+  cities!: string[];
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private _getDataService: getDataService) {
+    this.cities = _getDataService.getAllCitiesName();
     this.techIdeasForm = formBuilder.group({
       name: [''],
       age: [''],
