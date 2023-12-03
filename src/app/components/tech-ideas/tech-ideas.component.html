@@ -6,6 +6,15 @@
             <div class="input-container mb-3">
                 <label class="form-label">Name:</label>
                 <input type="text" class="form-control" formControlName="name" />
+                <span class="invalid-feedback" *ngIf="nameFormControl.touched && nameFormControl.errors?.['required']">
+                    Please insert your name.
+                </span>
+                <span class="invalid-feedback" *ngIf="nameFormControl.touched && nameFormControl.errors?.['minlength']">
+                    Your name should be more than 2 letters.
+                </span>
+                <span class="invalid-feedback" *ngIf="nameFormControl.touched && nameFormControl.errors?.['prohibited']">
+                    Your name cannot contain the word "tourist".
+                </span>
             </div>
             <div class="input-container mb-3">
                 <label class="form-label">Age:</label>
@@ -14,20 +23,38 @@
             <div class="input-container mb-3">
                 <label class="form-label">Email:</label>
                 <input type="email" class="form-control" formControlName="email" />
+                <span class="invalid-feedback" *ngIf="emailFormControl.touched && emailFormControl.errors?.['required']">
+                    Please insert your email.
+                </span>
+                <span class="invalid-feedback" *ngIf="emailFormControl.touched && emailFormControl.errors?.['email']">
+                    Please insert a valid email.
+                </span>
             </div>
             <div class="input-container mb-3">
                 <label class="form-label">City:</label>
                 <select class="form-control" formControlName="city">
-                    <option value="0" selected>--- SELECT CITY ---</option>
+                    <option value="" selected>--- SELECT CITY ---</option>
                     <option *ngFor="let city of cities">{{ city }}</option>
                 </select>
+                <span class="invalid-feedback" *ngIf="cityFormControl.touched && cityFormControl.errors?.['required']">
+                    Please select a city.
+                </span>
             </div>
             <div class="input-container mb-3">
                 <label class="form-label">Brief of your technical idea:</label>
                 <textarea class="form-control" formControlName="idea"></textarea>
+                <span class="invalid-feedback" *ngIf="ideaFormControl.touched && ideaFormControl.errors?.['required']">
+                    Please insert a brief about your project.
+                </span>
+                <span class="invalid-feedback" *ngIf="ideaFormControl.touched && ideaFormControl.errors?.['minlength']">
+                    Your brief should be more than 99 characters.
+                </span>
+                <span class="invalid-feedback" *ngIf="ideaFormControl.touched && ideaFormControl.errors?.['prohibited']">
+                    Your brief cannot contain the word "nothing".
+                </span>
             </div>
             <div class="input-container mb-3">
-                <button class="btn btn-primary" type="button" (click)="submitForm()">Submit</button>
+                <button class="btn btn-primary" type="button" (click)="submitForm()" [disabled]="techIdeasForm.invalid">Submit</button>
             </div>
         </form>
         <div class="col-md-5">

@@ -84,3 +84,11 @@ I'm removing the "Weather" option from the menu since it's related to a city and
     - FormBuilder
 4. Created submit function.
 5. Created the service to get only the cities name, imported into tech-ideas.component.ts and implemented on the form drop-down.
+6. Created service to load dataProtectionPolicies to fill the space a bit.
+7. Form styled with Bootstrap.
+8. Add validations
+    - Angular Validator
+    - Custom validations
+    - Error messages
+    - Submit button disabled until validations pased
+9. Log the form values on submit and reset the form.
