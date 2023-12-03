@@ -24,7 +24,7 @@ I'm removing the "Weather" option from the menu since it's related to a city and
     - Section title
     - Website description, aim, etc...
 
-## 7 - SET THE ROUTES
+## 5 - SET THE ROUTES
 1. Include the necessary classes for the router in the app.component.ts file and create the navigation functions
     - Router
     - RouterLink
@@ -37,7 +37,7 @@ I'm removing the "Weather" option from the menu since it's related to a city and
     - Redirect path "" to "home"
     - Set default route to 404 component
 
-## 5 - CREATE CITIES COMPONENT
+## 6 - CREATE CITIES COMPONENT
 ```BASH
     ng g c components/cities
 ```
@@ -48,7 +48,7 @@ I'm removing the "Weather" option from the menu since it's related to a city and
 5. Style the cards.
 6. Set the RouterLink prop for each card to redirect to the weather page.
 
-## 6 - CREATE WEATHER COMPONENT
+## 7 - CREATE WEATHER COMPONENT
 ```BASH
     ng g c components/weather
 ```
@@ -62,7 +62,7 @@ I'm removing the "Weather" option from the menu since it's related to a city and
     - Import the directive into the weather.component.ts
     - Apply the directive in the element inside weather.component.html
 
-## 7 - CREATE CAROUSEL COMPONENT
+## 8 - CREATE CAROUSEL COMPONENT
 ```BASH
     ng g c components/carousel
 ```
@@ -71,4 +71,7 @@ I'm removing the "Weather" option from the menu since it's related to a city and
 3. Create the service to get the attractions information for the selected city.
 4. If there are attractions, the component will show the images carousel and information. If undefined, the component remains hidden.
 
-
+## 9 - CREATE TECHIDEAS COMPONENT
+```BASH
+    ng g c components/techIdeas
+```
