@@ -1,0 +1,40 @@
+.card{
+    width: 30%;
+    margin-bottom:5dvh;
+    overflow: hidden;
+    cursor: pointer;
+
+    .card-title{
+        background-color: var(--lightBlue);
+        text-align: center;
+        padding:10px 0;
+        margin:0;
+        color: #FFFFFF;
+        font-weight: bold;
+        transition: .3s;
+    }
+
+    .card-body{
+        transition: .3s;
+
+        ul{
+            margin:0;
+            padding:0;
+            list-style: none;
+
+            li{
+                color: var(--lightBlue);
+                transition: .3s;
+            }
+        }
+    }
+}
+.card:hover{
+    .card-title,
+    .card-body ul li{
+        color:#000000;
+    }
+    .card-body{
+        background: var(--yellowOp);
+    }
+}

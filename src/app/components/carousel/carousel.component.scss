@@ -1,0 +1,34 @@
+.content-container{
+  margin-bottom:5dvh;
+
+  .carousel {
+    width: 40dvw;
+    position: relative;
+    
+    .images{
+      width: 40dvw;
+      height: 30dvw;
+      background-size: cover;
+      background-position: center center;
+      border-radius:20px;
+      box-shadow: 0 0 10px 0 var(--lightBlue);
+      margin-bottom:5dvh;
+    }
+
+    .active-image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+    }
+    
+    .prev-button,
+    .next-button {
+      color:white;
+      width:10dvw;
+      margin:0 5dvw;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

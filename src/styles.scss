@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --lightBlue: #29abe2;
+    --lightBlueOp: rgba(41, 171, 227, 0.6);
+    --yellow: #e4e44d;
+    --yellowOp: rgb(228, 228, 78, 0.8);
+    --darkTransparentBkg: rgba(42, 40, 40, 0.6)
+}
+*{
+    font-family: sans-serif;
+}
+h2{
+    padding:1dvmax;
+    border-bottom:solid 3px var(--yellow);
+    color: var(--lightBlue);
+}

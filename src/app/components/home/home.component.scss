@@ -1,0 +1,38 @@
+#banner{
+    height: 50dvh;
+    background-size: cover;
+    background-position: center center;
+    div{
+        background: var(--lightBlueOp);
+        padding:3dvh 10dvw;
+        border-radius:20px;
+        
+        h1{
+            letter-spacing: 3px;
+        }
+        h1, 
+        h3{
+            color: white;
+            text-align: center;    
+        }
+    }
+}
+.home-content{
+    margin: 5dvh 0;
+    p,
+    ul{
+        width: 30%;
+        border-radius: 20px;
+        padding:20px;
+    }
+    p{
+        background-color: var(--lightBlueOp);
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: var(--yellowOp);
+        list-style: none;
+    }
+}

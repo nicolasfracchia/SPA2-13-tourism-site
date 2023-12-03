@@ -1,27 +1,74 @@
-# MiniprojectTourism
+## 1 - CREATE NEW PROJECT
+``` ng new miniproject-tourism ```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
+## 2 - INCLUDE BOOTSTRAP (CDN in index.html)
+```HTML
+    <!-- SOURCE: https://getbootstrap.com/ -->
 
-## Development server
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 3 - CREATE NAVIGATION MENU AND FOOTER
+I'm removing the "Weather" option from the menu since it's related to a city and there is no point in having a tab of weather if I must get there with a city.
 
-## Code scaffolding
+## 4 - CREATE HOME COMPONENT
+```BASH
+    ng g c components/home
+```
+1. Import home component into app.components.ts
+2. Layout home component
+    - Banner
+    - Section title
+    - Website description, aim, etc...
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 7 - SET THE ROUTES
+1. Include the necessary classes for the router in the app.component.ts file and create the navigation functions
+    - Router
+    - RouterLink
+    - RouterLinkActive
+    - RouterOutlet
+    - navigation: ``` this.router.navigate(['...']); ```
+2. Set the routes in app.routes.ts
+    - Regular routes: home, cities
+    - Routes with params: cities/:city (used to show the weather)
+    - Redirect path "" to "home"
+    - Set default route to 404 component
 
-## Build
+## 5 - CREATE CITIES COMPONENT
+```BASH
+    ng g c components/cities
+```
+1. Create city interface ```ng g i interfaces/city```
+2. Create cities-data.ts inside the component to load some data using the interface.
+3. Create a service to get all the cities ```ng g s services/cities``` and use it in the cities component.
+4. Load the cities in cities.component.html using bootstrap cards and ```*ngFor```
+5. Style the cards.
+6. Set the RouterLink prop for each card to redirect to the weather page.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 6 - CREATE WEATHER COMPONENT
+```BASH
+    ng g c components/weather
+```
+1. Create weather interface ```ng g i interfaces/weather``` and temperatures interface ```ng g i interfaces/temperatures```
+2. Create weather-data.ts inside the component to load some data using the interfaces.
+3. Create the service to get the city information.
+4. Get the data for the selected city or show 404.
+5. Create ImportantText directive to set styles in the "Best time to visit" element.
+    - ``` ng g d directives/importantText ```
+    - Set the styles into the directive.
+    - Import the directive into the weather.component.ts
+    - Apply the directive in the element inside weather.component.html
 
-## Running unit tests
+## 7 - CREATE CAROUSEL COMPONENT
+```BASH
+    ng g c components/carousel
+```
+1. Create attractions interface ```ng g i interfaces/attractions``` (two interfaces together on this one)
+2. Create carousel-data.ts inside the component to load some data using the interface.
+3. Create the service to get the attractions information for the selected city.
+4. If there are attractions, the component will show the images carousel and information. If undefined, the component remains hidden.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

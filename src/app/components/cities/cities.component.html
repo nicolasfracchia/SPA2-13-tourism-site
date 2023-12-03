@@ -1,0 +1,13 @@
+<main class="container-fluid col-10">
+    <h2>Cities</h2>
+    <div class="container-fluid d-flex justify-content-between flex-wrap">
+        <div class="card" *ngFor="let city of cities" (click)="openWeatherPage(city.name)">
+            <div class="card-title bg-gradient">{{ city.name }}</div>
+            <div class="card-body">
+                <ul>
+                    <li *ngFor="let attraction of city.attractions">{{ attraction }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>

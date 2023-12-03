@@ -1,0 +1,23 @@
+.seasons-container{
+    border:solid 1px #CCCCCC;
+    border-radius:20px;
+    padding:20px;
+    .season-item{
+        padding:20px;
+
+        .season{
+            text-align: center;
+            font-weight: bold;
+            color:var(--lightBlue);
+            padding-bottom:5px;
+            margin-bottom:5px;
+            border-bottom: solid 1px var(--lightBlue);
+        }
+        .temperature{
+            display: inline-block;
+        }
+        .temperature-night{
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<main class="container-fluid col-10 p-0">
+    <h2>{{ city_details?.city_name }}</h2>
+    <div class="container-fluid col-md-9" appImportantText>
+        The best time to visit {{ city_details?.city_name }} is between {{ city_details?.visit_from }} and {{ city_details?.visit_to }}! 
+    </div>
+    <div class="seasons-container d-flex flex-wrap justify-content-between mt-3 mb-5">
+        <div class="season-item col-md-3" *ngFor="let t of city_details?.temperatures">
+            <div class="season col-12">{{ t.season }}</div>
+            <div class="temperature temperature-morning col-6">Morning: {{ t.morning }}&deg;C</div>
+            <div class="temperature temperature-night col-6">Night: {{ t.night }}&deg;C</div>
+        </div>
+    </div>
+    
+    <app-carousel *ngIf="city_attractions !== undefined" [images]="city_attractions.attractions"></app-carousel>
+    
+</main>

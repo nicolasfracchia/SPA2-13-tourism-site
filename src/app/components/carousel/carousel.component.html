@@ -1,0 +1,12 @@
+<div class="content-container container-fluid d-flex justify-content-between">
+    <div class="carousel">
+        <div class="images" [ngStyle]="{'background-image': 'url(' + getUriPath(currentImageIndex) + ')'}"></div>
+        
+        <button class="prev-button btn btn-info" (click)="prevImage()">Previous</button>
+        <button class="next-button btn btn-info" (click)="nextImage()">Next</button>
+    </div>
+    <div class="card col-md-5">
+        <div class="card-title"><h2>{{ images[currentImageIndex].title }}</h2></div>
+        <div class="card-body">{{ images[currentImageIndex].description }}</div>
+    </div>
+</div>
