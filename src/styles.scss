@@ -1,8 +1,10 @@
 :root{
     --lightBlue: #29abe2;
     --lightBlueOp: rgba(41, 171, 227, 0.6);
+    --lightBlueOp-03: rgba(41, 171, 227, 0.3);
     --yellow: #e4e44d;
     --yellowOp: rgb(228, 228, 78, 0.8);
+    --yellowOp-03: rgb(228, 228, 78, 0.3);
     --darkTransparentBkg: rgba(42, 40, 40, 0.6)
 }
 *{
@@ -12,4 +14,22 @@ h2{
     padding:1dvmax;
     border-bottom:solid 3px var(--yellow);
     color: var(--lightBlue);
+}
+
+/* ***** SCROLL BAR *** */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--lightBlueOp-03);
+}
+::-webkit-scrollbar-track:hover {
+    background: var(--lightBlueOp-03);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--lightBlueOp);
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--lightBlue);
 }

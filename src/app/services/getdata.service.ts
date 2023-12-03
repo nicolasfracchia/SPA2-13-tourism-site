@@ -5,6 +5,7 @@ import { iWeather } from '../interfaces/weather';
 import { weatherData } from '../components/weather/weather-data';
 import { iAttractions, iImage } from '../interfaces/attractions';
 import { attractionsData } from '../components/carousel/carousel-data';
+import { dataProtectionPoliciesData } from '../components/tech-ideas/policies-data';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,7 @@ export class getDataService {
   cities: iCity[] = citiesData;
   weather: iWeather[] = weatherData;
   attractions: iAttractions[] = attractionsData;
+  dataProtectionPolicies: string[] = dataProtectionPoliciesData;
 
   constructor() { }
 
@@ -30,5 +32,9 @@ export class getDataService {
 
   getCityAttractions(city_name: string): iAttractions | undefined {
     return this.attractions.find((i) => i.city_name === city_name);
+  }
+
+  getDataProtectionPolicies(): string[]{
+    return this.dataProtectionPolicies;
   }
 }
