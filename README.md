@@ -75,3 +75,11 @@ I'm removing the "Weather" option from the menu since it's related to a city and
 ```BASH
     ng g c components/techIdeas
 ```
+1. Layout form with required fields in tech-ideas.component.html.
+2. Created form group.
+3. Imported necesary classes for reactive forms in tech-ideas.component.ts
+    - CommonModule
+    - FormsModule
+    - ReactiveFormsModule
+    - FormBuilder
+4. Created submit function.
