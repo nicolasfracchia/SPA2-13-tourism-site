@@ -92,3 +92,7 @@ I'm removing the "Weather" option from the menu since it's related to a city and
     - Error messages
     - Submit button disabled until validations pased
 9. Log the form values on submit and reset the form.
+
+## 10 - CREATE 404 ERROR PAGE
+1. Set as default route.
+2. Redirects in app.routes.ts with optional message to display
