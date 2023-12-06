@@ -2,7 +2,8 @@ import { iCity } from "../../interfaces/city";
 
 export const citiesData: iCity[] = [
     {name: 'Buenos Aires', attractions: ['Obelisco','Recoleta Cemetery', 'Plaza de Mayo', 'Teatro Colón', 'La Boca Neighborhood']},
-    {name: 'Bariloche', attractions: ['Nahuel Huapi National Park', 'Cerro Catedral', 'Circuito Chico', 'Isla Victoria', 'Puerto Blest']},
+    //{name: 'Bariloche', attractions: ['Nahuel Huapi National Park', 'Cerro Catedral', 'Circuito Chico', 'Isla Victoria', 'Puerto Blest']},
+    {name: 'Bariloche', attractions: ['Nahuel Huapi National Park', 'Cerro Catedral', 'Isla Victoria', 'Puerto Blest']},
     {name: 'Mendoza', attractions: ['Parque San Martín', 'Plaza Independencia', 'Cerro de la Gloria', 'Aconcagua (highest peak in South America)', 'Maipú Wine Region']},
     {name: 'Córdoba', attractions: ['Plaza San Martín', 'Córdoba Cabildo', 'Manzana Jesuítica', 'Paseo del Buen Pastor']},
     {name: 'Salta', attractions: ['Plaza 9 de Julio', 'Cerro San Bernardo', 'Cathedral Basilica of Salta', 'Tren de las Nubes', 'Quebrada de Cafayate']},
